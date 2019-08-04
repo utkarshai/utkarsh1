@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:image_et/home.dart';
 
+import 'list.dart';
+
 class move extends StatefulWidget {
   @override
   _moveState createState() => _moveState();
 }
 
 class _moveState extends State<move> {
+  List cat1=cat;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +34,7 @@ class _moveState extends State<move> {
               title: Text('cat'),
                onLongPress:  ()=>Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Home()),
+                  MaterialPageRoute(builder: (context) => Home(cat)),
                 ),
               onTap: () {
                 // Update the state of the app
@@ -44,7 +47,7 @@ class _moveState extends State<move> {
               title: Text('dogs'),
                onLongPress:  ()=>Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Home()),
+                  MaterialPageRoute(builder: (context) => Home(dog)),
                 ),
               onTap: () {
                 // Update the state of the app
@@ -57,7 +60,7 @@ class _moveState extends State<move> {
               title: Text('foods'),
                onLongPress:  ()=>Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Home()),
+                  MaterialPageRoute(builder: (context) => Home(food)),
                 ),
               onTap: () {
                 // Update the state of the app
@@ -70,7 +73,7 @@ class _moveState extends State<move> {
               title: Text('nature'),
               onLongPress:  ()=>Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Home()),
+                  MaterialPageRoute(builder: (context) => Home(nature)),
                 ),
               onTap: () {
                 // Update the state of the app

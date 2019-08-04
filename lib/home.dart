@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:image_et/second.dart';
 
 class Home extends StatefulWidget {
+  List li;
+  Home(this.li);
   @override
   _HomeState createState() => _HomeState();
 }
@@ -19,12 +21,15 @@ class _HomeState extends State<Home> {
           // horizontal, this produces 2 rows.
           crossAxisCount: 2,
           // Generate 100 widgets that display their index in the List.
-          children: List.generate(100, (index) {
+          children: List.generate(widget.li.length, (index) {
             return  Center(
               child: Column(
                   children: <Widget>[
-                    Flexible(child:  Image.network(
-                  'https://picsum.photos/250?image=9',
+                    Container(
+                      height: 130,
+                      width: 130,
+                      child:  Image.network(
+                  widget.li[index],
               ),
               ),
               Container(
@@ -32,7 +37,7 @@ class _HomeState extends State<Home> {
                 child: 
                     RaisedButton(
                    hoverColor: Colors.lightGreen,
-                    onPressed: ()=>  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SecondRoute())),
+                    onPressed: ()=>  Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => SecondRoute(widget.li[index]))),
                     child: Text("image"),  
                   
                 ),
