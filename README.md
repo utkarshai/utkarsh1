@@ -5,6 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
+you shoul add some new collection of images in the library
 
 A few resources to get you started if this is your first Flutter project:
 
